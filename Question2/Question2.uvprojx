@@ -10,6 +10,7 @@
       <TargetName>Target 1</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>6140000::V6.14::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -426,6 +427,28 @@
         </Group>
         <Group>
           <GroupName>Header</GroupName>
+          <Files>
+            <File>
+              <FileName>enableClockAndTimer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\enableClockAndTimer.h</FilePath>
+            </File>
+            <File>
+              <FileName>setupGPIOandKeyMatrix.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\setupGPIOandKeyMatrix.h</FilePath>
+            </File>
+            <File>
+              <FileName>displayDigit.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\displayDigit.h</FilePath>
+            </File>
+            <File>
+              <FileName>clockState.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\clockState.h</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>
