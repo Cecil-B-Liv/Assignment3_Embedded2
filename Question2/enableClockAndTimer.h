@@ -5,8 +5,7 @@
 
 #define HXT_STATUS (1 << 0)  // High-Speed External Crystal stable flag
 #define LXT_STATUS (1 << 1)  // Low-Speed External Crystal stable flag
-#define TIMER0_COUNT \
-    1000000 - 1  // Timer compare value for generating interrupts
+#define TIMER0_COUNT 1000000 - 1  // Timer compare value for generating interrupts
 
 void enableClockSource() {
     // Enable HXT (High-Speed External Oscillator)

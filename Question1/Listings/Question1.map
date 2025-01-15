@@ -7,10 +7,10 @@ Section Cross References
     main.o(.text.main) refers to gpio.o(.text.GPIO_SetMode) for GPIO_SetMode
     main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
     main.o(.ARM.exidx.text.UART0_SendChar) refers to main.o(.text.UART0_SendChar) for [Anonymous Symbol]
-    main.o(.ARM.exidx.text.UART0_GetChar) refers to main.o(.text.UART0_GetChar) for [Anonymous Symbol]
     main.o(.text.UART02_IRQHandler) refers to main.o(.text.UART0_GetChar) for UART0_GetChar
     main.o(.text.UART02_IRQHandler) refers to main.o(.text.UART0_SendChar) for UART0_SendChar
     main.o(.ARM.exidx.text.UART02_IRQHandler) refers to main.o(.text.UART02_IRQHandler) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.UART0_GetChar) refers to main.o(.text.UART0_GetChar) for [Anonymous Symbol]
     system_nuc100series.o(.text.SystemCoreClockUpdate) refers to aeabi_sdiv.o(.text) for __aeabi_uidiv
     system_nuc100series.o(.text.SystemCoreClockUpdate) refers to system_nuc100series.o(.data..L_MergedGlobals) for [Anonymous Symbol]
     system_nuc100series.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_nuc100series.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
@@ -149,8 +149,8 @@ Removing Unused input sections from the image.
     Removing main.o(.text), (0 bytes).
     Removing main.o(.ARM.exidx.text.main), (8 bytes).
     Removing main.o(.ARM.exidx.text.UART0_SendChar), (8 bytes).
-    Removing main.o(.ARM.exidx.text.UART0_GetChar), (8 bytes).
     Removing main.o(.ARM.exidx.text.UART02_IRQHandler), (8 bytes).
+    Removing main.o(.ARM.exidx.text.UART0_GetChar), (8 bytes).
     Removing main.o(.ARM.use_no_argv), (4 bytes).
     Removing system_nuc100series.o(.text), (0 bytes).
     Removing system_nuc100series.o(.text.SystemCoreClockUpdate), (152 bytes).
@@ -293,7 +293,7 @@ Image Symbol Table
     .text                                    0x00000216   Section        0  indicate_semi.o(.text)
     [Anonymous Symbol]                       0x00000240   Section        0  system_nuc100series.o(.text.SystemInit)
     [Anonymous Symbol]                       0x00000244   Section        0  main.o(.text.UART02_IRQHandler)
-    __arm_cp.3_0                             0x00000258   Number         4  main.o(.text.UART02_IRQHandler)
+    __arm_cp.2_0                             0x00000258   Number         4  main.o(.text.UART02_IRQHandler)
     [Anonymous Symbol]                       0x0000025c   Section        0  main.o(.text.UART0_GetChar)
     [Anonymous Symbol]                       0x0000026c   Section        0  main.o(.text.UART0_SendChar)
     __arm_cp.1_0                             0x0000028c   Number         4  main.o(.text.UART0_SendChar)
@@ -525,8 +525,8 @@ Memory Map of the image
     0x00000216   0x00000216   0x0000002a   Code   RO           41    .text.GPIO_SetMode  gpio.o
     0x00000240   0x00000240   0x00000002   Code   RO           21    .text.SystemInit    system_nuc100series.o
     0x00000242   0x00000242   0x00000002   PAD
-    0x00000244   0x00000244   0x00000018   Code   RO            8    .text.UART02_IRQHandler  main.o
-    0x0000025c   0x0000025c   0x00000010   Code   RO            6    .text.UART0_GetChar  main.o
+    0x00000244   0x00000244   0x00000018   Code   RO            6    .text.UART02_IRQHandler  main.o
+    0x0000025c   0x0000025c   0x00000010   Code   RO            8    .text.UART0_GetChar  main.o
     0x0000026c   0x0000026c   0x00000024   Code   RO            4    .text.UART0_SendChar  main.o
     0x00000290   0x00000290   0x0000011c   Code   RO            2    .text.main          main.o
     0x000003ac   0x000003ac   0x00000010   Data   RO          236    Region$$Table       anon$$obj.o

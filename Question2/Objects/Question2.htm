@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\Question2.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\Question2.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6140002: Last Updated: Wed Jan 15 16:38:46 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6140002: Last Updated: Wed Jan 15 22:31:32 2025
 <BR><P>
 <H3>Maximum Stack Usage =         40 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -348,7 +348,7 @@ Global Symbols
 <P><STRONG><a name="[48]"></a>__aeabi_idivmod</STRONG> (Thumb, 338 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;save
+<BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;save
 </UL>
 
 <P><STRONG><a name="[7d]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
@@ -395,7 +395,7 @@ Global Symbols
 
 <P><STRONG><a name="[84]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[9]"></a>EINT1_IRQHandler</STRONG> (Thumb, 92 bytes, Stack size 8 bytes, main.o(.text.EINT1_IRQHandler))
+<P><STRONG><a name="[9]"></a>EINT1_IRQHandler</STRONG> (Thumb, 84 bytes, Stack size 8 bytes, main.o(.text.EINT1_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = EINT1_IRQHandler
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;displayRecord
@@ -461,17 +461,17 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[34]"></a>main</STRONG> (Thumb, 340 bytes, Stack size 8 bytes, main.o(.text.main))
+<P><STRONG><a name="[34]"></a>main</STRONG> (Thumb, 320 bytes, Stack size 8 bytes, main.o(.text.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = main &rArr; save &rArr; __aeabi_idivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;switchState
-<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;showNumbers
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;showNumbers
 <LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setupKeyMatrix
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setupGPIO
-<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;saveCurrentTime
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;save
-<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reset
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reloadCurrentTime
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;saveCurrentTime
+<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;save
+<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reset
+<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reloadCurrentTime
 <LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enableTimer0
 <LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enableClockSource
 <LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;displayRecord
@@ -479,15 +479,15 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[46]"></a>reloadCurrentTime</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, main.o(.text.reloadCurrentTime))
+<P><STRONG><a name="[45]"></a>reloadCurrentTime</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, main.o(.text.reloadCurrentTime))
 <BR><BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[44]"></a>reset</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, main.o(.text.reset))
+<P><STRONG><a name="[43]"></a>reset</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, main.o(.text.reset))
 <BR><BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[45]"></a>save</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, main.o(.text.save))
+<P><STRONG><a name="[44]"></a>save</STRONG> (Thumb, 64 bytes, Stack size 24 bytes, main.o(.text.save))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = save &rArr; __aeabi_idivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
@@ -495,7 +495,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[47]"></a>saveCurrentTime</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, main.o(.text.saveCurrentTime))
+<P><STRONG><a name="[46]"></a>saveCurrentTime</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text.saveCurrentTime))
 <BR><BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -511,7 +511,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[43]"></a>showNumbers</STRONG> (Thumb, 76 bytes, Stack size 24 bytes, main.o(.text.showNumbers))
+<P><STRONG><a name="[47]"></a>showNumbers</STRONG> (Thumb, 76 bytes, Stack size 24 bytes, main.o(.text.showNumbers))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = showNumbers
 </UL>
 <BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnOnU14
@@ -522,7 +522,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[42]"></a>switchState</STRONG> (Thumb, 144 bytes, Stack size 8 bytes, main.o(.text.switchState))
+<P><STRONG><a name="[42]"></a>switchState</STRONG> (Thumb, 132 bytes, Stack size 8 bytes, main.o(.text.switchState))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = switchState
 </UL>
 <BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -532,19 +532,19 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.text.showNumbers)
 </UL>
 <P><STRONG><a name="[4c]"></a>turnOnU11</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, main.o(.text.turnOnU11))
-<BR><BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;showNumbers
+<BR><BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;showNumbers
 </UL>
 
 <P><STRONG><a name="[4b]"></a>turnOnU12</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, main.o(.text.turnOnU12))
-<BR><BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;showNumbers
+<BR><BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;showNumbers
 </UL>
 
 <P><STRONG><a name="[4a]"></a>turnOnU13</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, main.o(.text.turnOnU13))
-<BR><BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;showNumbers
+<BR><BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;showNumbers
 </UL>
 
 <P><STRONG><a name="[49]"></a>turnOnU14</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, main.o(.text.turnOnU14))
-<BR><BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;showNumbers
+<BR><BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;showNumbers
 </UL>
 
 <P><STRONG><a name="[28]"></a>updateDigit</STRONG> (Thumb, 86 bytes, Stack size 8 bytes, main.o(.text.updateDigit))
