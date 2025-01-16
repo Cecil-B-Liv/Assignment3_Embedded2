@@ -191,7 +191,7 @@ void EINT1_IRQHandler(void) {
 void TMR0_IRQHandler(void) {
     TIMER0->TISR |= (1 << 0);
     ++ticks; // Increment ticks (1/10 second)
-	  PC->DOUT ^= (1 << 8);
+	  PC->DOUT ^= (1 << 9);
 	
 		if (minutes == 10) {
         minutes = 0;

@@ -5,7 +5,7 @@
 
 #define HXT_STATUS (1 << 0)  // High-Speed External Crystal stable flag
 #define LXT_STATUS (1 << 1)  // Low-Speed External Crystal stable flag
-#define TIMER0_COUNT 1000000 - 1  // Timer compare value for generating interrupts
+#define TIMER0_COUNT 100000 - 1  // Timer compare value for generating interrupts
 
 void enableClockSource() {
     // Enable HXT (High-Speed External Oscillator)
@@ -13,8 +13,8 @@ void enableClockSource() {
     // Wait for HXT to stabilize
     while (!(CLK->CLKSTATUS & HXT_STATUS))
 
-        // Select LXT as the clock source
-        CLK->CLKSEL0 &= ~(0x7 << 0);  // Clear clock source selection bits
+    // Select LXT as the clock source
+    CLK->CLKSEL0 &= ~(0x7 << 0);  // Clear clock source selection bits
     // Clear 000 to set HXT (12 kHz) as clock source
 
     // Configure power mode (optional)
@@ -22,7 +22,7 @@ void enableClockSource() {
 
     // Set Clock Divider to 1 (no division)
     CLK->CLKDIV &= ~(0xF << 0);  // Clear clock divider bits
-    CLK->CLKDIV = 11;
+    CLK->CLKDIV |= 11 << 0; // Here we divide 12mhz source with 11+1 = 100000
 }
 
 void enableTimer0() {
@@ -33,6 +33,7 @@ void enableTimer0() {
         << 8);  // Clear bits [10:8] to select HXT (12 MHz) as the clock source
     // By default, 0x000 (HXT) is already selected, so the |= operation is not
     // strictly necessary.
+		CLK->CLKSEL1 |= 0b010 << 8;
 
     // Enable Timer 0 Clock
     CLK->APBCLK |= (1 << 2);  // Enable the Timer 0 clock by setting bit 2 in

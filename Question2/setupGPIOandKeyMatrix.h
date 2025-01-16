@@ -21,8 +21,8 @@ void setupGPIO() {
     PC->PMD |= (0b010101 << 10);     // Set GPC5, GPC6, GPC7 to output mode (binary 01 per pin)
 
     // Setup GPC8 as Output
-    PC->PMD &= ~(0b11 << 16);        // Clear PMD bits for GPC8
-    PC->PMD |= (0b01 << 16);         // Set GPC8 to output mode (binary 01)
+    PC->PMD &= ~(0b11 << 18);        // Clear PMD bits for GPC8
+    PC->PMD |= (0b01 << 18);         // Set GPC8 to output mode (binary 01)
 
     // Setup 7-Segment Display (PE0 to PE7) as Output
     PE->PMD &= ~(0xFFFF << 0);       // Clear PMD bits for PE0 to PE7
