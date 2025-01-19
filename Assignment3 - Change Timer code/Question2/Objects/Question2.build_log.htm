@@ -1,0 +1,802 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.30.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Liv Cecil, RMIT, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.30.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14
+Assembler:       Armasm.exe V6.14
+Linker/Locator:  ArmLink.exe V6.14
+Library Manager: ArmAr.exe V6.14
+Hex Converter:   FromElf.exe V6.14
+CPU DLL:         SARMCM3.DLL V5.30.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.3.0
+Target DLL:      NULink\Nu_Link.dll V3.02
+Dialog DLL:      TARMCM1.DLL V1.14.2.0
+ 
+<h2>Project:</h2>
+C:\Users\juras\Documents\Code\EEET2481-Embedded2\Assignment3_Embedded2\Assignment3 - Change Timer code\Question2\Question2.uvprojx
+Project File Date:  01/16/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+main.c(3): warning: In file included from...
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(150): warning: In file included from...
+C:/Keil_v5/Library/CMSIS/Include\core_cm0.h(116): warning: In file included from...
+C:/Keil_v5/Library/CMSIS/Include\core_cmInstr.h(406): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int32_t' (aka 'int') [-Wsign-conversion]
+  return(result);
+  ~~~~~~ ^~~~~~
+main.c(3): warning: In file included from...
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(150): warning: In file included from...
+C:/Keil_v5/Library/CMSIS/Include\core_cm0.h(574): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    SCB->SHP[_SHP_IDX(IRQn)] = (SCB->SHP[_SHP_IDX(IRQn)] & ~(0xFF << _BIT_SHIFT(IRQn))) |
+                                                         ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Keil_v5/Library/CMSIS/Include\core_cm0.h(577): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    NVIC->IP[_IP_IDX(IRQn)] = (NVIC->IP[_IP_IDX(IRQn)] & ~(0xFF << _BIT_SHIFT(IRQn))) |
+                                                       ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Keil_v5/Library/CMSIS/Include\core_cm0.h(608): warning: function 'NVIC_SystemReset' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+main.c(3): warning: In file included from...
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(11321): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+    union
+    ^
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13605): warning: non-portable path to file '"sys.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "SYS.h"
+         ^~~~~~~
+         "sys.h"
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13606): warning: non-portable path to file '"adc.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "ADC.h"
+         ^~~~~~~
+         "adc.h"
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13607): warning: non-portable path to file '"fmc.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "FMC.h"
+         ^~~~~~~
+         "fmc.h"
+main.c(3): warning: In file included from...
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13607): warning: In file included from...
+C:/Keil_v5/Library/StdDriver/Include\FMC.h(314): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+    FMC->ISPADR = (u8index << 2);      /* Set UID Address. It must be word alignment. */
+                ~  ~~~~~~~~^~~~
+main.c(3): warning: In file included from...
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13608): warning: non-portable path to file '"gpio.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "GPIO.h"
+         ^~~~~~~~
+         "gpio.h"
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13609): warning: non-portable path to file '"i2c.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "I2C.h"
+         ^~~~~~~
+         "i2c.h"
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13610): warning: non-portable path to file '"pwm.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "PWM.h"
+         ^~~~~~~
+         "pwm.h"
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13611): warning: non-portable path to file '"spi.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "SPI.h"
+         ^~~~~~~
+         "spi.h"
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13612): warning: non-portable path to file '"crc.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "CRC.h"
+         ^~~~~~~
+         "crc.h"
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13613): warning: non-portable path to file '"timer.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "TIMER.h"
+         ^~~~~~~~~
+         "timer.h"
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13614): warning: non-portable path to file '"wdt.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "WDT.h"
+         ^~~~~~~
+         "wdt.h"
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13615): warning: non-portable path to file '"wwdt.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "WWDT.h"
+         ^~~~~~~~
+         "wwdt.h"
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13616): warning: non-portable path to file '"rtc.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "RTC.h"
+         ^~~~~~~
+         "rtc.h"
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13617): warning: non-portable path to file '"uart.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "UART.h"
+         ^~~~~~~~
+         "uart.h"
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13618): warning: non-portable path to file '"i2s.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "I2S.h"
+         ^~~~~~~
+         "i2s.h"
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13619): warning: non-portable path to file '"can.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "CAN.h"
+         ^~~~~~~
+         "can.h"
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13620): warning: non-portable path to file '"usbd.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "USBD.h"
+         ^~~~~~~~
+         "usbd.h"
+main.c(3): warning: In file included from...
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13620): warning: In file included from...
+C:/Keil_v5/Library/StdDriver/Include\USBD.h(638): warning: variable 'u32CfgAddr' may be uninitialized when used here [-Wconditional-uninitialized]
+    return ((*((__IO uint32_t *)(u32CfgAddr))) & USBD_CFGP_SSTALL);
+                                 ^~~~~~~~~~
+C:/Keil_v5/Library/StdDriver/Include\USBD.h(622): note: initialize the variable 'u32CfgAddr' to silence this warning
+    uint32_t u32CfgAddr;
+                       ^
+                        = 0
+main.c(3): warning: In file included from...
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13621): warning: non-portable path to file '"pdma.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "PDMA.h"
+         ^~~~~~~~
+         "pdma.h"
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13622): warning: non-portable path to file '"sc.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "SC.h"
+         ^~~~~~
+         "sc.h"
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13623): warning: non-portable path to file '"ps2.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "PS2.h"
+         ^~~~~~~
+         "ps2.h"
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13624): warning: non-portable path to file '"clk.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "CLK.h"
+         ^~~~~~~
+         "clk.h"
+C:/Keil_v5/Library/NUC100Series/Include\NUC100Series.h(13625): warning: non-portable path to file '"acmp.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "ACMP.h"
+         ^~~~~~~~
+         "acmp.h"
+main.c(5): warning: In file included from...
+./clockState.h(5): warning: no previous prototype for function 'startCounter' [-Wmissing-prototypes]
+void startCounter() {
+     ^
+./clockState.h(5): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void startCounter() {
+^
+static 
+./clockState.h(14): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    TIMER0->TCSR &= ~(1 << 30);
+                 ~~ ^~~~~~~~~~
+./clockState.h(15): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+./clockState.h(11): warning: no previous prototype for function 'pauseCounter' [-Wmissing-prototypes]
+void pauseCounter() {
+     ^
+./clockState.h(11): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void pauseCounter() {
+^
+static 
+main.c(6): warning: In file included from...
+./displayDigit.h(7): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PC->DOUT &= ~(1 << 5);  // U13
+             ~~ ^~~~~~~~~
+./displayDigit.h(8): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PC->DOUT &= ~(1 << 6);  // U12
+             ~~ ^~~~~~~~~
+./displayDigit.h(9): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PC->DOUT &= ~(1 << 7);  // U11
+             ~~ ^~~~~~~~~
+./displayDigit.h(5): warning: no previous prototype for function 'turnOnU14' [-Wmissing-prototypes]
+void turnOnU14() {
+     ^
+./displayDigit.h(5): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void turnOnU14() {
+^
+static 
+./displayDigit.h(13): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PC->DOUT &= ~(1 << 4);  // U14
+             ~~ ^~~~~~~~~
+./displayDigit.h(15): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PC->DOUT &= ~(1 << 6);  // U12
+             ~~ ^~~~~~~~~
+./displayDigit.h(16): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PC->DOUT &= ~(1 << 7);  // U11
+             ~~ ^~~~~~~~~
+./displayDigit.h(12): warning: no previous prototype for function 'turnOnU13' [-Wmissing-prototypes]
+void turnOnU13() {
+     ^
+./displayDigit.h(12): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void turnOnU13() {
+^
+static 
+./displayDigit.h(20): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PC->DOUT &= ~(1 << 4);  // U14
+             ~~ ^~~~~~~~~
+./displayDigit.h(21): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PC->DOUT &= ~(1 << 5);  // U13
+             ~~ ^~~~~~~~~
+./displayDigit.h(23): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PC->DOUT &= ~(1 << 7);  // U11
+             ~~ ^~~~~~~~~
+./displayDigit.h(19): warning: no previous prototype for function 'turnOnU12' [-Wmissing-prototypes]
+void turnOnU12() {
+     ^
+./displayDigit.h(19): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void turnOnU12() {
+^
+static 
+./displayDigit.h(27): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PC->DOUT &= ~(1 << 4);  // U14
+             ~~ ^~~~~~~~~
+./displayDigit.h(28): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PC->DOUT &= ~(1 << 5);  // U13
+             ~~ ^~~~~~~~~
+./displayDigit.h(29): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PC->DOUT &= ~(1 << 6);  // U12
+             ~~ ^~~~~~~~~
+./displayDigit.h(26): warning: no previous prototype for function 'turnOnU11' [-Wmissing-prototypes]
+void turnOnU11() {
+     ^
+./displayDigit.h(26): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void turnOnU11() {
+^
+static 
+./displayDigit.h(33): warning: no previous prototype for function 'turnOffDigit' [-Wmissing-prototypes]
+void turnOffDigit() {
+     ^
+./displayDigit.h(33): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void turnOffDigit() {
+^
+static 
+./displayDigit.h(45): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 0);  // segment c
+             ~~ ^~~~~~~~~
+./displayDigit.h(47): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 2);  // segment f
+             ~~ ^~~~~~~~~
+./displayDigit.h(48): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 3);  // segment a
+             ~~ ^~~~~~~~~
+./displayDigit.h(49): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 4);  // segment b
+             ~~ ^~~~~~~~~
+./displayDigit.h(50): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 5);  // segment d
+             ~~ ^~~~~~~~~
+./displayDigit.h(51): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 6);  // segment e
+             ~~ ^~~~~~~~~
+./displayDigit.h(44): warning: no previous prototype for function 'displayZero' [-Wmissing-prototypes]
+void displayZero() {
+     ^
+./displayDigit.h(44): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void displayZero() {
+^
+static 
+./displayDigit.h(56): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 0);  // segment c
+             ~~ ^~~~~~~~~
+./displayDigit.h(60): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 4);  // segment b
+             ~~ ^~~~~~~~~
+./displayDigit.h(55): warning: no previous prototype for function 'displayOne' [-Wmissing-prototypes]
+void displayOne() {
+     ^
+./displayDigit.h(55): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void displayOne() {
+^
+static 
+./displayDigit.h(70): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 3);  // segment a
+             ~~ ^~~~~~~~~
+./displayDigit.h(71): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 4);  // segment b
+             ~~ ^~~~~~~~~
+./displayDigit.h(72): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 5);  // segment d
+             ~~ ^~~~~~~~~
+./displayDigit.h(73): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 6);  // segment e
+             ~~ ^~~~~~~~~
+./displayDigit.h(74): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 7);  // segment g
+             ~~ ^~~~~~~~~
+./displayDigit.h(66): warning: no previous prototype for function 'displayTwo' [-Wmissing-prototypes]
+void displayTwo() {
+     ^
+./displayDigit.h(66): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void displayTwo() {
+^
+static 
+./displayDigit.h(78): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 0);  // segment c
+             ~~ ^~~~~~~~~
+./displayDigit.h(81): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 3);  // segment a
+             ~~ ^~~~~~~~~
+./displayDigit.h(82): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 4);  // segment b
+             ~~ ^~~~~~~~~
+./displayDigit.h(83): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 5);  // segment d
+             ~~ ^~~~~~~~~
+./displayDigit.h(85): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 7);  // segment g
+             ~~ ^~~~~~~~~
+./displayDigit.h(77): warning: no previous prototype for function 'displayThree' [-Wmissing-prototypes]
+void displayThree() {
+     ^
+./displayDigit.h(77): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void displayThree() {
+^
+static 
+./displayDigit.h(89): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 0);  // segment c
+             ~~ ^~~~~~~~~
+./displayDigit.h(91): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 2);  // segment f
+             ~~ ^~~~~~~~~
+./displayDigit.h(93): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 4);  // segment b
+             ~~ ^~~~~~~~~
+./displayDigit.h(96): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 7);  // segment g
+             ~~ ^~~~~~~~~
+./displayDigit.h(88): warning: no previous prototype for function 'displayFour' [-Wmissing-prototypes]
+void displayFour() {
+     ^
+./displayDigit.h(88): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void displayFour() {
+^
+static 
+./displayDigit.h(100): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 0);  // segment c
+             ~~ ^~~~~~~~~
+./displayDigit.h(102): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 2);  // segment f
+             ~~ ^~~~~~~~~
+./displayDigit.h(103): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 3);  // segment a
+             ~~ ^~~~~~~~~
+./displayDigit.h(105): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 5);  // segment d
+             ~~ ^~~~~~~~~
+./displayDigit.h(107): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 7);  // segment g
+             ~~ ^~~~~~~~~
+./displayDigit.h(99): warning: no previous prototype for function 'displayFive' [-Wmissing-prototypes]
+void displayFive() {
+     ^
+./displayDigit.h(99): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void displayFive() {
+^
+static 
+./displayDigit.h(111): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 0);  // segment c
+             ~~ ^~~~~~~~~
+./displayDigit.h(113): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 2);  // segment f
+             ~~ ^~~~~~~~~
+./displayDigit.h(114): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 3);  // segment a
+             ~~ ^~~~~~~~~
+./displayDigit.h(116): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 5);  // segment d
+             ~~ ^~~~~~~~~
+./displayDigit.h(117): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 6);  // segment e
+             ~~ ^~~~~~~~~
+./displayDigit.h(118): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 7);  // segment g
+             ~~ ^~~~~~~~~
+./displayDigit.h(110): warning: no previous prototype for function 'displaySix' [-Wmissing-prototypes]
+void displaySix() {
+     ^
+./displayDigit.h(110): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void displaySix() {
+^
+static 
+./displayDigit.h(122): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 0);  // segment c
+             ~~ ^~~~~~~~~
+./displayDigit.h(125): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 3);  // segment a
+             ~~ ^~~~~~~~~
+./displayDigit.h(126): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 4);  // segment b
+             ~~ ^~~~~~~~~
+./displayDigit.h(121): warning: no previous prototype for function 'displaySeven' [-Wmissing-prototypes]
+void displaySeven() {
+     ^
+./displayDigit.h(121): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void displaySeven() {
+^
+static 
+./displayDigit.h(133): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 0);  // segment c
+             ~~ ^~~~~~~~~
+./displayDigit.h(135): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 2);  // segment f
+             ~~ ^~~~~~~~~
+./displayDigit.h(136): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 3);  // segment a
+             ~~ ^~~~~~~~~
+./displayDigit.h(137): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 4);  // segment b
+             ~~ ^~~~~~~~~
+./displayDigit.h(138): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 5);  // segment d
+             ~~ ^~~~~~~~~
+./displayDigit.h(139): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 6);  // segment e
+             ~~ ^~~~~~~~~
+./displayDigit.h(140): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 7);  // segment g
+             ~~ ^~~~~~~~~
+./displayDigit.h(132): warning: no previous prototype for function 'displayEight' [-Wmissing-prototypes]
+void displayEight() {
+     ^
+./displayDigit.h(132): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void displayEight() {
+^
+static 
+./displayDigit.h(144): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 0);  // segment c
+             ~~ ^~~~~~~~~
+./displayDigit.h(146): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 2);  // segment f
+             ~~ ^~~~~~~~~
+./displayDigit.h(147): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 3);  // segment a
+             ~~ ^~~~~~~~~
+./displayDigit.h(148): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 4);  // segment b
+             ~~ ^~~~~~~~~
+./displayDigit.h(149): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 5);  // segment d
+             ~~ ^~~~~~~~~
+./displayDigit.h(151): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 7);  // segment g
+             ~~ ^~~~~~~~~
+./displayDigit.h(143): warning: no previous prototype for function 'displayNine' [-Wmissing-prototypes]
+void displayNine() {
+     ^
+./displayDigit.h(143): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void displayNine() {
+^
+static 
+./displayDigit.h(154): warning: no previous prototype for function 'updateDigit' [-Wmissing-prototypes]
+void updateDigit(int count) {
+     ^
+./displayDigit.h(154): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void updateDigit(int count) {
+^
+static 
+./displayDigit.h(199): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->DOUT &= ~(1 << 1);
+             ~~ ^~~~~~~~~
+./displayDigit.h(192): warning: no previous prototype for function 'showNumbers' [-Wmissing-prototypes]
+void showNumbers(int countU11, int countU12, int countU13, int countU14) {
+     ^
+./displayDigit.h(192): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void showNumbers(int countU11, int countU12, int countU13, int countU14) {
+^
+static 
+main.c(7): warning: In file included from...
+./enableClockAndTimer.h(17): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    CLK->CLKSEL0 &= ~(0x7 << 0);  // Clear clock source selection bits
+                 ~~ ^~~~~~~~~~~
+./enableClockAndTimer.h(21): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    CLK->PWRCON &= ~(1 << 7);  // Disable power-down mode if previously enabled
+                ~~ ^~~~~~~~~
+./enableClockAndTimer.h(24): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    CLK->CLKDIV &= ~(0xF << 0);  // Clear clock divider bits
+                ~~ ^~~~~~~~~~~
+./enableClockAndTimer.h(10): warning: no previous prototype for function 'enableClockSource' [-Wmissing-prototypes]
+void enableClockSource() {
+     ^
+./enableClockAndTimer.h(10): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void enableClockSource() {
+^
+static 
+./enableClockAndTimer.h(31): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    CLK->CLKSEL1 &= ~(
+                 ~~ ^~
+./enableClockAndTimer.h(36): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+                CLK->CLKSEL1 |= 0b010 << 8;
+                                ^
+./enableClockAndTimer.h(44): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    TIMER0->TCSR &= ~(0xFF << 0);
+                 ~~ ^~~~~~~~~~~~
+./enableClockAndTimer.h(50): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    TIMER0->TCSR &= ~(0x3 << 27);  // Clear the mode selection bits
+                 ~~ ^~~~~~~~~~~~
+./enableClockAndTimer.h(54): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    TIMER0->TCSR &= ~(1 << 24);
+                 ~~ ^~~~~~~~~~
+./enableClockAndTimer.h(68): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+./enableClockAndTimer.h(28): warning: no previous prototype for function 'enableTimer0' [-Wmissing-prototypes]
+void enableTimer0() {
+     ^
+./enableClockAndTimer.h(28): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void enableTimer0() {
+^
+static 
+main.c(8): warning: In file included from...
+./setupGPIOandKeyMatrix.h(7): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+                PA->PMD &= (~(0b11<< 6));
+                              ^
+./setupGPIOandKeyMatrix.h(7): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                PA->PMD &= (~(0b11<< 6));
+                        ~~  ^~~~~~~~~~~
+./setupGPIOandKeyMatrix.h(8): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+    PA->PMD |= (0b01 << 6);    
+                ^
+./setupGPIOandKeyMatrix.h(9): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+                PA->PMD &= (~(0b11<< 8));
+                              ^
+./setupGPIOandKeyMatrix.h(9): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                PA->PMD &= (~(0b11<< 8));
+                        ~~  ^~~~~~~~~~~
+./setupGPIOandKeyMatrix.h(10): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+    PA->PMD |= (0b01 << 8);             
+                ^
+./setupGPIOandKeyMatrix.h(11): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+                PA->PMD &= (~(0b11<< 10));
+                              ^
+./setupGPIOandKeyMatrix.h(11): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                PA->PMD &= (~(0b11<< 10));
+                        ~~  ^~~~~~~~~~~~
+./setupGPIOandKeyMatrix.h(12): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+    PA->PMD |= (0b01 << 10);  
+                ^
+./setupGPIOandKeyMatrix.h(5): warning: no previous prototype for function 'setupKeyMatrix' [-Wmissing-prototypes]
+void setupKeyMatrix(){
+     ^
+./setupGPIOandKeyMatrix.h(5): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void setupKeyMatrix(){
+^
+static 
+./setupGPIOandKeyMatrix.h(20): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PC->PMD &= ~(0xFF << 10);        // Clear PMD bits for GPC5, GPC6, GPC7
+            ~~ ^~~~~~~~~~~~~
+./setupGPIOandKeyMatrix.h(21): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+    PC->PMD |= (0b010101 << 10);     // Set GPC5, GPC6, GPC7 to output mode (binary 01 per pin)
+                ^
+./setupGPIOandKeyMatrix.h(24): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+    PC->PMD &= ~(0b11 << 18);        // Clear PMD bits for GPC8
+                 ^
+./setupGPIOandKeyMatrix.h(24): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PC->PMD &= ~(0b11 << 18);        // Clear PMD bits for GPC8
+            ~~ ^~~~~~~~~~~~~
+./setupGPIOandKeyMatrix.h(25): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+    PC->PMD |= (0b01 << 18);         // Set GPC8 to output mode (binary 01)
+                ^
+./setupGPIOandKeyMatrix.h(28): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PE->PMD &= ~(0xFFFF << 0);       // Clear PMD bits for PE0 to PE7
+            ~~ ^~~~~~~~~~~~~~
+./setupGPIOandKeyMatrix.h(29): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+    PE->PMD |= (0b0101010101010101 << 0);  // Set PE0 to PE7 to output mode (binary 01 per pin)
+                ^
+./setupGPIOandKeyMatrix.h(32): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+    PB->PMD &= ~(0b11ul << 30);      // Clear PMD bits for PB15 (input mode)
+                 ^
+./setupGPIOandKeyMatrix.h(15): warning: no previous prototype for function 'setupGPIO' [-Wmissing-prototypes]
+void setupGPIO() {
+     ^
+./setupGPIOandKeyMatrix.h(15): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void setupGPIO() {
+^
+static 
+main.c(16): warning: no previous extern declaration for non-static variable 'minutes' [-Wmissing-variable-declarations]
+volatile int minutes = 0;       // U11
+             ^
+main.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int minutes = 0;       // U11
+         ^
+main.c(17): warning: no previous extern declaration for non-static variable 'tensOfSecond' [-Wmissing-variable-declarations]
+volatile int tensOfSecond = 0;  // U12
+             ^
+main.c(17): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int tensOfSecond = 0;  // U12
+         ^
+main.c(18): warning: no previous extern declaration for non-static variable 'unitSecond' [-Wmissing-variable-declarations]
+volatile int unitSecond = 0;    // U13
+             ^
+main.c(18): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int unitSecond = 0;    // U13
+         ^
+main.c(19): warning: no previous extern declaration for non-static variable 'ticks' [-Wmissing-variable-declarations]
+volatile int ticks = 0;         // U14
+             ^
+main.c(19): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int ticks = 0;         // U14
+         ^
+main.c(22): warning: no previous extern declaration for non-static variable 'tempMinutes' [-Wmissing-variable-declarations]
+volatile int tempMinutes = 0;
+             ^
+main.c(22): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int tempMinutes = 0;
+         ^
+main.c(23): warning: no previous extern declaration for non-static variable 'tempTensOfSecond' [-Wmissing-variable-declarations]
+volatile int tempTensOfSecond = 0;
+             ^
+main.c(23): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int tempTensOfSecond = 0;
+         ^
+main.c(24): warning: no previous extern declaration for non-static variable 'tempUnitSecond' [-Wmissing-variable-declarations]
+volatile int tempUnitSecond = 0;
+             ^
+main.c(24): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int tempUnitSecond = 0;
+         ^
+main.c(25): warning: no previous extern declaration for non-static variable 'tempTicks' [-Wmissing-variable-declarations]
+volatile int tempTicks = 0;
+             ^
+main.c(25): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int tempTicks = 0;
+         ^
+main.c(28): warning: no previous extern declaration for non-static variable 'currentDisplayIndex' [-Wmissing-variable-declarations]
+volatile int currentDisplayIndex = 0;
+             ^
+main.c(28): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int currentDisplayIndex = 0;
+         ^
+main.c(29): warning: no previous extern declaration for non-static variable 'recordIndex' [-Wmissing-variable-declarations]
+volatile int recordIndex = 0;
+             ^
+main.c(29): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int recordIndex = 0;
+         ^
+main.c(32): warning: no previous extern declaration for non-static variable 'lapRecord' [-Wmissing-variable-declarations]
+int lapRecord[LAP_LIMIT][4] = {0};
+    ^
+main.c(32): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int lapRecord[LAP_LIMIT][4] = {0};
+^
+main.c(36): warning: no previous extern declaration for non-static variable 'currentState' [-Wmissing-variable-declarations]
+enum state currentState = MODE_IDLE;
+           ^
+main.c(36): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+enum state currentState = MODE_IDLE;
+^
+main.c(39): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void displayRecord();
+                  ^
+                   void
+main.c(43): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void saveCurrentTime();
+                    ^
+                     void
+main.c(44): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void reloadCurrentTime();
+                      ^
+                       void
+main.c(47): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PA->DOUT &= ~(1 << 3);
+             ~~ ^~~~~~~~~
+main.c(65): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                PA->DOUT &= ~(1 << 4);
+                         ~~ ^~~~~~~~~
+main.c(82): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    PA->DOUT &= ~(1 << 5);
+             ~~ ^~~~~~~~~
+main.c(106): warning: no previous prototype for function 'saveCurrentTime' [-Wmissing-prototypes]
+void saveCurrentTime() {
+     ^
+main.c(43): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void saveCurrentTime();
+     ^
+                     void
+main.c(114): warning: no previous prototype for function 'reloadCurrentTime' [-Wmissing-prototypes]
+void reloadCurrentTime() {
+     ^
+main.c(44): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void reloadCurrentTime();
+     ^
+                       void
+main.c(123): warning: declaration shadows a variable in the global scope [-Wshadow]
+void save(int minutes, int tensOfSecond, int unitSecond, int ticks) {
+              ^
+main.c(16): note: previous declaration is here
+volatile int minutes = 0;       // U11
+             ^
+main.c(123): warning: declaration shadows a variable in the global scope [-Wshadow]
+void save(int minutes, int tensOfSecond, int unitSecond, int ticks) {
+                           ^
+main.c(17): note: previous declaration is here
+volatile int tensOfSecond = 0;  // U12
+             ^
+main.c(123): warning: declaration shadows a variable in the global scope [-Wshadow]
+void save(int minutes, int tensOfSecond, int unitSecond, int ticks) {
+                                             ^
+main.c(18): note: previous declaration is here
+volatile int unitSecond = 0;    // U13
+             ^
+main.c(123): warning: declaration shadows a variable in the global scope [-Wshadow]
+void save(int minutes, int tensOfSecond, int unitSecond, int ticks) {
+                                                             ^
+main.c(19): note: previous declaration is here
+volatile int ticks = 0;         // U14
+             ^
+main.c(146): warning: no previous prototype for function 'displayRecord' [-Wmissing-prototypes]
+void displayRecord() { 
+     ^
+main.c(39): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void displayRecord();
+     ^
+                   void
+main.c(158): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            PC->DOUT &= ~(1 << 13);
+                     ~~ ^~~~~~~~~~
+main.c(164): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            PC->DOUT &= ~(1 << 14);
+                     ~~ ^~~~~~~~~~
+main.c(178): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            PC->DOUT &= ~(1 << 12);
+                     ~~ ^~~~~~~~~~
+main.c(155): warning: enumeration value 'MODE_IDLE' not explicitly handled in switch [-Wswitch-enum]
+    switch (currentState) {
+            ^
+main.c(154): warning: no previous prototype for function 'switchState' [-Wmissing-prototypes]
+void switchState() {
+     ^
+main.c(154): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void switchState() {
+^
+static 
+main.c(181): warning: 'break' will never be executed [-Wunreachable-code-break]
+            break;
+            ^~~~~
+main.c(174): warning: 'break' will never be executed [-Wunreachable-code-break]
+            break;
+            ^~~~~
+main.c(168): warning: 'break' will never be executed [-Wunreachable-code-break]
+            break;
+            ^~~~~
+main.c(161): warning: 'break' will never be executed [-Wunreachable-code-break]
+            break;
+            ^~~~~
+main.c(185): warning: no previous prototype for function 'EINT1_IRQHandler' [-Wmissing-prototypes]
+void EINT1_IRQHandler(void) {
+     ^
+main.c(185): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void EINT1_IRQHandler(void) {
+^
+static 
+main.c(191): warning: no previous prototype for function 'TMR0_IRQHandler' [-Wmissing-prototypes]
+void TMR0_IRQHandler(void) {
+     ^
+main.c(191): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TMR0_IRQHandler(void) {
+^
+static 
+main.c(222): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        PA->DOUT &= ~(1 << 3);
+                 ~~ ^~~~~~~~~
+main.c(223): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        PA->DOUT &= ~(1 << 4);
+                 ~~ ^~~~~~~~~
+main.c(224): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        PA->DOUT &= ~(1 << 5);
+                 ~~ ^~~~~~~~~
+main.c(247): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+181 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=3028 RO-data=224 RW-data=44 ZI-data=1248  
+".\Objects\Question2.axf" - 0 Error(s), 181 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Nuvoton
+                https://github.com/OpenNuvoton/cmsis-packs/raw/master/Nuvoton_DFP/Nuvoton.NuMicro_DFP.1.3.16.pack
+                Nuvoton.NuMicro_DFP.1.3.16
+                Nuvoton ARM Cortex-M NuMicro Family Device Support
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Keil_v5\Packs\Nuvoton\NuMicro_DFP\1.3.16\Device\NUC100\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>
