@@ -12,6 +12,9 @@ void enableClockSource() {
     CLK->PWRCON |= (1 << 0);  // (external 12 MHz crystal)
     // Wait for HXT to stabilize
     while (!(CLK->CLKSTATUS & HXT_STATUS))
+			
+		CLK->PWRCON |= (1 << 2);
+    while(!(CLK->CLKSTATUS & (1 << 4))); 
 
     // Select LXT as the clock source
     CLK->CLKSEL0 &= ~(0x7 << 0);  // Clear clock source selection bits
@@ -33,7 +36,7 @@ void enableTimer0() {
         << 8);  // Clear bits [10:8] to select HXT (12 MHz) as the clock source
     // By default, 0x000 (HXT) is already selected, so the |= operation is not
     // strictly necessary.
-		CLK->CLKSEL1 |= 0b010 << 8;
+		CLK->CLKSEL1 |= 0b111 << 8;
 
     // Enable Timer 0 Clock
     CLK->APBCLK |= (1 << 2);  // Enable the Timer 0 clock by setting bit 2 in
