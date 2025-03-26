@@ -476,44 +476,44 @@ void showNumbers(int countU11, int countU12, int countU13, int countU14) {
 ^
 static 
 main.c(7): warning: In file included from...
-./enableClockAndTimer.h(17): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+./enableClockAndTimer.h(18): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
     CLK->CLKSEL0 &= ~(0x7 << 0);  // Clear clock source selection bits
                  ~~ ^~~~~~~~~~~
-./enableClockAndTimer.h(21): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+./enableClockAndTimer.h(22): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
     CLK->PWRCON &= ~(1 << 7);  // Disable power-down mode if previously enabled
                 ~~ ^~~~~~~~~
-./enableClockAndTimer.h(24): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+./enableClockAndTimer.h(25): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
     CLK->CLKDIV &= ~(0xF << 0);  // Clear clock divider bits
                 ~~ ^~~~~~~~~~~
-./enableClockAndTimer.h(10): warning: no previous prototype for function 'enableClockSource' [-Wmissing-prototypes]
+./enableClockAndTimer.h(11): warning: no previous prototype for function 'enableClockSource' [-Wmissing-prototypes]
 void enableClockSource() {
      ^
-./enableClockAndTimer.h(10): note: declare 'static' if the function is not intended to be used outside of this translation unit
+./enableClockAndTimer.h(11): note: declare 'static' if the function is not intended to be used outside of this translation unit
 void enableClockSource() {
 ^
 static 
-./enableClockAndTimer.h(31): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+./enableClockAndTimer.h(32): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
     CLK->CLKSEL1 &= ~(
                  ~~ ^~
-./enableClockAndTimer.h(36): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
-                CLK->CLKSEL1 |= 0b010 << 8;
+./enableClockAndTimer.h(37): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+                CLK->CLKSEL1 |= 0b010 << 8; //hclk
                                 ^
-./enableClockAndTimer.h(44): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+./enableClockAndTimer.h(46): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
     TIMER0->TCSR &= ~(0xFF << 0);
                  ~~ ^~~~~~~~~~~~
-./enableClockAndTimer.h(50): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+./enableClockAndTimer.h(52): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
     TIMER0->TCSR &= ~(0x3 << 27);  // Clear the mode selection bits
                  ~~ ^~~~~~~~~~~~
-./enableClockAndTimer.h(54): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+./enableClockAndTimer.h(56): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
     TIMER0->TCSR &= ~(1 << 24);
                  ~~ ^~~~~~~~~~
-./enableClockAndTimer.h(68): warning: no newline at end of file [-Wnewline-eof]
+./enableClockAndTimer.h(70): warning: no newline at end of file [-Wnewline-eof]
 }
  ^
-./enableClockAndTimer.h(28): warning: no previous prototype for function 'enableTimer0' [-Wmissing-prototypes]
+./enableClockAndTimer.h(29): warning: no previous prototype for function 'enableTimer0' [-Wmissing-prototypes]
 void enableTimer0() {
      ^
-./enableClockAndTimer.h(28): note: declare 'static' if the function is not intended to be used outside of this translation unit
+./enableClockAndTimer.h(29): note: declare 'static' if the function is not intended to be used outside of this translation unit
 void enableTimer0() {
 ^
 static 
